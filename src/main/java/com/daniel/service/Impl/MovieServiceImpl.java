@@ -1,9 +1,11 @@
 package com.daniel.service.Impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.annotation.Resource;
 
+import org.bson.types.ObjectId;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +24,12 @@ public class MovieServiceImpl implements MovieService{
 	public List<Movie> allMovies() {
 		// TODO Auto-generated method stub
 		return movieRepository.findAll();
+	}
+
+	@Override
+	public Optional<Movie> singleMovies(ObjectId id) {
+		// TODO Auto-generated method stub
+		return movieRepository.findById(id);
 	}
 	
 }
