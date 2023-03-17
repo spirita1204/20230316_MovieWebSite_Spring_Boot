@@ -6,8 +6,8 @@ import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.daniel.domain.Movie;
+import com.daniel.domain.Review;
 @Repository
-public interface MovieRepository extends MongoRepository<Movie, ObjectId> {
-	Optional<Movie> findMovieByImdbId(String imdbId);
+public interface ReviewRepository extends MongoRepository<Review, ObjectId> {
+	
 }

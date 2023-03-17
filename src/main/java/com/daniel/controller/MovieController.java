@@ -26,8 +26,9 @@ public class MovieController {
 		return new ResponseEntity<>(movieService.allMovies(),HttpStatus.OK);
 	}
 	
-	@RequestMapping("/id")
-	public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable ObjectId id){
-		return new ResponseEntity<Optional<Movie>>;
+	@RequestMapping("{imdbId}")
+	//可以将 URL 中占位符参数绑定到控制器处理方法的入参中:URL 中的 {xxx} 占位符可以通过@PathVariable(“xxx”) 绑定到操作方法的入参中。
+	public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String imdbId){
+		return new ResponseEntity<Optional<Movie>>(movieService.singleMovies(imdbId), HttpStatus.OK);
 	}
 }

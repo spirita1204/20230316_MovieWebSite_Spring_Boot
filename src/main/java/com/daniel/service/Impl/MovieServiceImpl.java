@@ -27,9 +27,9 @@ public class MovieServiceImpl implements MovieService{
 	}
 
 	@Override
-	public Optional<Movie> singleMovies(ObjectId id) {
+	public Optional<Movie> singleMovies(String imdbId) {
 		// TODO Auto-generated method stub
-		return movieRepository.findById(id);
+		return movieRepository.findMovieByImdbId(imdbId);
 	}
 	
 }

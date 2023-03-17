@@ -10,11 +10,10 @@ import com.daniel.domain.Movie;
 public interface MovieService {
 	/**
 	 * 回傳所有movie
-	 * @return
 	 */
 	public List<Movie> allMovies();
 	/**
 	 * 回傳單一個 movie
 	 */
-	public Optional<Movie> singleMovies(ObjectId id);
+	public Optional<Movie> singleMovies(String imdbId);
 }
