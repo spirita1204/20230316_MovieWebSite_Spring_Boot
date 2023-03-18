@@ -8,11 +8,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Document(collection = "movie") // 標記這個class對映一個collection，在(Movie)這個collection裡面操作document
-@AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Data //getter + setter + equals + hashCode + toString 
 public class Movie {
 	@Id
